@@ -17,7 +17,53 @@ toc::[]
 
 {BACK_TO_TOP}
 
-== Installation
+== Coder et tester en C++
+
+=== Installer C++
+
+----
+$ sudo apt-get install g++
+----
+
+=== Installer Google Test
+
+----
+sudo apt-get install libgtest-dev
+sudo apt-get install cmake
+
+cd /usr/src/googletest/googletest
+sudo mkdir build
+
+cd build
+sudo cmake ..
+sudo make
+sudo cp libgtest* /usr/lib/
+
+cd ..
+sudo rm -rf build
+
+sudo mkdir /usr/local/lib/googletest
+sudo ln -s /usr/lib/libgtest.a /usr/local/lib/googletest/libgtest.a
+sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/googletest/libgtest_main.a
+----
+
+== Utiliser cette toolbox
+
+=== Cloner le repo
+
+----
+$ git clone git@github.com:jprivet-dev/arduino-googletest-toolbox.git
+----
+
+=== Initialiser & Exécuter les tests
+
+----
+$ cd tests
+$ cmake CMakeLists.txt
+$ make
+
+$ ./executeTests
+----
 
 == Ressources
 
