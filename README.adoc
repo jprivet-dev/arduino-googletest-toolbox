@@ -62,8 +62,12 @@ $ cd tests
 $ cmake CMakeLists.txt
 $ make
 
-$ ./executeTests
+$ ./runTests
 ----
 
 == Ressources
+
+* https://github.com/google/googletest
+* How To Install/Use Google C++ Test Framework - https://www.srcmake.com/home/google-cpp-test-framework
+* Google C++ Testing, GTest, GMock Framework - https://www.youtube.com/watch?v=nbFXI9SDfbk&list=PL_dsdStdDXbo-zApdWB5XiF2aWpsqzV55
 
