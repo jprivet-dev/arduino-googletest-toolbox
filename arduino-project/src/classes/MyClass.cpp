@@ -1,3 +1,6 @@
+#ifndef MYCLASS_CPP
+#define MYCLASS_CPP
+
 using namespace std;
 
 class MyClass
@@ -31,3 +34,5 @@ class MyClass
   private:
     int _value;
 };
+
+#endif
