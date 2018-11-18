@@ -8,5 +8,5 @@ TEST(MyClassTest, get_id) {
     string id = mc.getId();
 
     // Assert
-    ASSERT_EQ(id, "root");
+    ASSERT_STREQ(id.c_str(), "root");
 }
