@@ -1,6 +1,6 @@
 
 #include <gtest/gtest.h>
-#include "helpers/squareRoot.cpp"
+#include "helpers/squareRootTest.cpp"
 
 int main(int argc, char **argv)
 {
