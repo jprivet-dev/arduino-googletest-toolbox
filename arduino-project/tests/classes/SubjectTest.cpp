@@ -1,12 +1,25 @@
 #include "../../src/classes/Subject.cpp"
 
-TEST(SubjectTest, get_name)
+struct SubjectTestSetup : public testing::Test
 {
-    // Arrange
-    Subject subjet("myname");
+    Subject *sub;
 
+    void SetUp()
+    {
+        // Arrange
+        sub = new Subject("myname");
+    }
+
+    void TearDown()
+    {
+        delete sub;
+    }
+};
+
+TEST_F(SubjectTestSetup, get_name)
+{
     // Act
-    string name = subjet.getName();
+    string name = sub->getName();
 
     // Assert
     ASSERT_STREQ(name.c_str(), "myname");
