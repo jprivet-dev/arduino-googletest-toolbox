@@ -3,6 +3,7 @@
 #include "helpers/squareRootTest.cpp"
 #include "classes/MyClassTest.cpp"
 #include "classes/MyClassWithSetupTest.cpp"
+#include "classes/SubjectTest.cpp"
 
 int main(int argc, char **argv)
 {
