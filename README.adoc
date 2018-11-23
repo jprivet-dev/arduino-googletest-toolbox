@@ -60,7 +60,9 @@ $ git clone git@github.com:jprivet-dev/arduino-googletest-toolbox.git
 ----
 $ cd tests
 $ cmake CMakeLists.txt
-$ make
+
+$ alias m="make"
+$ m
 
 $ alias t="./runTests"
 $ t
