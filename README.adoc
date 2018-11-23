@@ -62,7 +62,8 @@ $ cd tests
 $ cmake CMakeLists.txt
 $ make
 
-$ ./runTests
+$ alias t="./runTests"
+$ t
 ----
 
 == Ressources
