@@ -5,7 +5,11 @@ using namespace std;
 
 class MyClass
 {
+  protected:
     string id;
+
+  private:
+    int _value;
 
   public:
     MyClass(string _id) : id(_id)
@@ -22,7 +26,8 @@ class MyClass
         _value = value;
     }
 
-    int getValue() {
+    int getValue()
+    {
         return _value;
     }
 
@@ -30,9 +35,6 @@ class MyClass
     {
         _value += increment;
     }
-
-  private:
-    int _value;
 };
 
 #endif
