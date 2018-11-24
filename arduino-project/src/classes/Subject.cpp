@@ -1,22 +1,20 @@
 #ifndef SUBJECT_CPP
 #define SUBJECT_CPP
 
-using namespace std;
+#include "../interfaces/SubjectInterface.cpp"
 
-class Subject
+class Subject : public SubjectInterface
 {
-  protected:
-    string name;
+protected:
+  std::string name;
 
-  public:
-    Subject(string _name) : name(_name)
-    {
-    }
+public:
+  Subject(std::string _name) : name(_name) {}
 
-    string getName()
-    {
-        return name;
-    }
+  std::string getName()
+  {
+    return name;
+  }
 };
 
 #endif
