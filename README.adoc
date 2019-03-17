@@ -21,13 +21,13 @@ toc::[]
 
 === Installer C++
 
-----
+```bash
 $ sudo apt-get install g++
-----
+```
 
 === Installer Google Test
 
-----
+```bash
 sudo apt-get install libgtest-dev
 sudo apt-get install cmake
 
@@ -45,28 +45,63 @@ sudo rm -rf build
 sudo mkdir /usr/local/lib/googletest
 sudo ln -s /usr/lib/libgtest.a /usr/local/lib/googletest/libgtest.a
 sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/googletest/libgtest_main.a
-----
+```
 
 == Utiliser cette toolbox
 
 === Cloner le repo
 
-----
-$ git clone git@github.com:jprivet-dev/arduino-googletest-toolbox.git
-----
+```bash
+git clone git@github.com:jprivet-dev/arduino-googletest-toolbox.git
+cd arduino-googletest-toolbox
+```
 
 === Initialiser & Exécuter les tests
 
-----
-$ cd tests
-$ cmake CMakeLists.txt
+A partir du dossier du repo cloné `arduino-googletest-toolbox`
 
-$ alias m="make"
-$ m
+```bash
+cd arduino-project/tests
+cmake CMakeLists.txt
+make
+./runTests
+```
 
-$ alias t="./runTests"
-$ t
-----
+Le test affichera un message du type :
+
+```bash
+[==========] Running 7 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from SquareRootTest
+[ RUN      ] SquareRootTest.PositiveNos
+[       OK ] SquareRootTest.PositiveNos (0 ms)
+[ RUN      ] SquareRootTest.NegativeNos
+[       OK ] SquareRootTest.NegativeNos (0 ms)
+[----------] 2 tests from SquareRootTest (1 ms total)
+
+[----------] 2 tests from MyClassTest
+[ RUN      ] MyClassTest.get_id
+[       OK ] MyClassTest.get_id (0 ms)
+[ RUN      ] MyClassTest.increment_by_5
+[       OK ] MyClassTest.increment_by_5 (0 ms)
+[----------] 2 tests from MyClassTest (0 ms total)
+
+[----------] 2 tests from MyClassWithSetupTest
+[ RUN      ] MyClassWithSetupTest.get_id
+[       OK ] MyClassWithSetupTest.get_id (0 ms)
+[ RUN      ] MyClassWithSetupTest.increment_by_5
+[       OK ] MyClassWithSetupTest.increment_by_5 (0 ms)
+[----------] 2 tests from MyClassWithSetupTest (0 ms total)
+
+[----------] 1 test from SubjectTestSetup
+[ RUN      ] SubjectTestSetup.get_name
+[       OK ] SubjectTestSetup.get_name (0 ms)
+[----------] 1 test from SubjectTestSetup (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 4 test cases ran. (1 ms total)
+[  PASSED  ] 7 tests.
+```
 
 == Ressources
 
