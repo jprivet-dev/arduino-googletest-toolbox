@@ -5,16 +5,16 @@
 
 class Subject : public SubjectInterface
 {
-protected:
-  std::string name;
+  protected:
+    std::string name;
 
-public:
-  Subject(std::string _name) : name(_name) {}
+  public:
+    Subject(std::string _name) : name(_name) {}
 
-  std::string getName()
-  {
-    return name;
-  }
+    std::string getName()
+    {
+      return name;
+    }
 };
 
 #endif
