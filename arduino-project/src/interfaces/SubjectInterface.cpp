@@ -7,7 +7,6 @@ struct SubjectInterface
 {
   public:
     virtual ~SubjectInterface() {}
-    virtual std::string getName() = 0;
 };
 
 #endif
