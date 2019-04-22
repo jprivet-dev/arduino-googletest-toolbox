@@ -11,10 +11,6 @@ class Observer
     update()
     {
     }
-
-    reportError(errorCode, errorMessage, subject)
-    {
-    }
 };
 
 #endif
