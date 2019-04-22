@@ -2,6 +2,7 @@
 #define SUBJECT_CPP
 
 #include "../interfaces/SubjectInterface.cpp"
+#include "Observer.cpp"
 
 class Subject : public SubjectInterface
 {
