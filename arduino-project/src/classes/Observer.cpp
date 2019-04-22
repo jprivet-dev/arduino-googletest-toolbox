@@ -4,13 +4,9 @@
 class Observer
 {
   public:
-    Observer()
-    {
-    }
-
-    update()
-    {
-    }
+    Observer() {}
+    
+    void update() {}
 };
 
 #endif
