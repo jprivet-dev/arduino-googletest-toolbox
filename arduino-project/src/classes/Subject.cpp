@@ -10,22 +10,21 @@
 
 class Subject : public SubjectInterface
 {
+  public:
+    std::vector<std::string> observers;
+
   protected:
     std::string name;
-
-  private:
-    std::vector<std::string> _observers;
 
   public:
     Subject(std::string _name) : name(_name) {}
 
-    std::string getName()
-    {
+    std::string getName() {
       return name;
     }
 
     void attach() {
-      _observers.push_back("abc");
+      observers.push_back("abc");
     }
 
     void detach() {}
