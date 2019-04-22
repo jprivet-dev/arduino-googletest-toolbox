@@ -15,6 +15,12 @@ class Subject : public SubjectInterface
     {
       return name;
     }
+
+    void attach() {}
+
+    void detach() {}
+
+    void notify() {}
 };
 
 #endif
