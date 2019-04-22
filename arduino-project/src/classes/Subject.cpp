@@ -13,15 +13,8 @@ class Subject : public SubjectInterface
   public:
     std::vector<std::string> observers;
 
-  protected:
-    std::string name;
-
   public:
-    Subject(std::string _name) : name(_name) {}
-
-    std::string getName() {
-      return name;
-    }
+    Subject() {}
 
     void attach() {
       observers.push_back("abc");
