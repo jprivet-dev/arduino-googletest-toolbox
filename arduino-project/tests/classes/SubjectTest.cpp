@@ -9,9 +9,9 @@ struct SubjectTestSetup : public testing::Test
     void SetUp()
     {
         // Arrange
-        Subject sub;
+        Subject *sub = new Subject();
         observer = "abc";
-        observerObj = new __observer();
+        __observer *observerObj = new __observer();
     }
 
     void TearDown()
@@ -31,6 +31,7 @@ TEST_F(SubjectTestSetup, attach_1_observer)
 {
     // Act
     sub->attach(observer);
+    //sub->attachObj(observerObj);
 
     // Assert
     ASSERT_EQ(sub->observers.size(), 1);
