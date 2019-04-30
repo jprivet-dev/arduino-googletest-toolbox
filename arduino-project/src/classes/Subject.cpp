@@ -12,24 +12,24 @@
 class Subject : public SubjectInterface
 {
   public:
-    std::vector<std::reference_wrapper<observer>> observersObj;
+    std::vector<std::reference_wrapper<__observer>> observersObj;
     std::vector<std::string> observers;
 
   public:
     Subject() {}
 
-    void attach(string observer) {
+    void attach(std::string observer) {
       observers.push_back(observer);
     }
 
-   void attachObj(observer& o)
+   void attachObj(__observer& o)
     {
       observersObj.push_back(o);
     }
     
     void notify_observersObj()
     {
-      for (observer& o : observersObj) {
+      for (__observer& o : observersObj) {
         o.notify();
       }
     }
