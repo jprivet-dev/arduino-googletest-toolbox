@@ -9,7 +9,7 @@ struct SubjectTestSetup : public testing::Test
     void SetUp()
     {
         // Arrange
-        sub = new Subject();
+        Subject sub;
         observer = "abc";
         observerObj = new __observer();
     }
