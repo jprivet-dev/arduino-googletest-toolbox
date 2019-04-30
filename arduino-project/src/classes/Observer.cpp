@@ -9,17 +9,13 @@ class Observer
     void update() {}
 };
 
-class observer
+class __observer
 {
   public:
-    virtual void notify() = 0;
-};
+    __observer() {}
 
-class observer_concrete : public observer
-{
   public:
-    virtual void notify() override
-    { }
+    virtual void notify() {}
 };
 
 #endif
