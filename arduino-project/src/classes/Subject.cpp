@@ -2,6 +2,7 @@
 #define SUBJECT_CPP
 
 #include <vector>
+#include <functional>
 #include <iostream>
 #include <iomanip>
 
@@ -11,6 +12,7 @@
 class Subject : public SubjectInterface
 {
   public:
+    std::vector<std::reference_wrapper<observer>> observersObj;
     std::vector<std::string> observers;
 
   public:
@@ -20,9 +22,17 @@ class Subject : public SubjectInterface
       observers.push_back(observer);
     }
 
-    void detach() {}
-
-    void notify() {}
+   void attachObj(observer& o)
+    {
+      observersObj.push_back(o);
+    }
+    
+    void notify_observersObj()
+    {
+      for (observer& o : observersObj) {
+        o.notify();
+      }
+    }
 };
 
 #endif
