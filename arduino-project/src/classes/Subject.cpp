@@ -22,7 +22,7 @@ class Subject : public SubjectInterface
       observers.push_back(observer);
     }
 
-   void attachObj(__observer& o)
+    void attachObj(__observer& o)
     {
       observersObj.push_back(o);
     }
