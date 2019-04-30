@@ -16,8 +16,8 @@ class Subject : public SubjectInterface
   public:
     Subject() {}
 
-    void attach() {
-      observers.push_back("abc");
+    void attach(string observer) {
+      observers.push_back(observer);
     }
 
     void detach() {}
