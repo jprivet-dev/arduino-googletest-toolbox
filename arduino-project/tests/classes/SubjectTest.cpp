@@ -25,7 +25,7 @@ TEST_F(SubjectTestSetup, attach_no_observer)
 TEST_F(SubjectTestSetup, attach_1_observer)
 {
     // Act
-    sub->attach();
+    sub->attach("abc");
 
     // Assert
     ASSERT_EQ(sub->observers.size(), 1);
@@ -34,9 +34,9 @@ TEST_F(SubjectTestSetup, attach_1_observer)
 TEST_F(SubjectTestSetup, attach_3_observers)
 {
     // Act
-    sub->attach();
-    sub->attach();
-    sub->attach();
+    sub->attach("abc");
+    sub->attach("abc");
+    sub->attach("abc");
 
     // Assert
     ASSERT_EQ(sub->observers.size(), 3);
