@@ -5,6 +5,7 @@
 #include <functional>
 #include <iostream>
 #include <iomanip>
+#include <list>
 
 #include "../interfaces/SubjectInterface.cpp"
 #include "Observer.cpp"
@@ -14,6 +15,7 @@ class Subject : public SubjectInterface
   public:
     std::vector<std::reference_wrapper<__observer>> observersObj;
     std::vector<std::string> observers;
+    std::list<__observer*> observersList;
 
   public:
     Subject() {}
@@ -22,9 +24,9 @@ class Subject : public SubjectInterface
       observers.push_back(observer);
     }
 
-    void attachObj(__observer& o)
+    void attachObj(__observer *o)
     {
-      observersObj.push_back(o);
+      observersList.push_back(o);
     }
     
     void notify_observersObj()
