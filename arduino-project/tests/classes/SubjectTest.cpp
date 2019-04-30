@@ -25,16 +25,18 @@ TEST_F(SubjectTestSetup, attach_no_observer)
     // Assert
     ASSERT_EQ(sub->observers.size(), 0);
     ASSERT_EQ(sub->observersObj.size(), 0);
+    ASSERT_EQ(sub->observersList.size(), 0);
 }
 
 TEST_F(SubjectTestSetup, attach_1_observer)
 {
     // Act
     sub->attach(observer);
-    //sub->attachObj(observerObj);
+    sub->attachObj(observerObj);
 
     // Assert
     ASSERT_EQ(sub->observers.size(), 1);
+    ASSERT_EQ(sub->observersList.size(), 1);
 }
 
 TEST_F(SubjectTestSetup, attach_3_observers)
@@ -44,6 +46,11 @@ TEST_F(SubjectTestSetup, attach_3_observers)
     sub->attach(observer);
     sub->attach(observer);
 
+    sub->attachObj(observerObj);
+    sub->attachObj(observerObj);
+    sub->attachObj(observerObj);
+
     // Assert
     ASSERT_EQ(sub->observers.size(), 3);
+    ASSERT_EQ(sub->observersList.size(), 3);
 }
