@@ -17,7 +17,7 @@ class Subject : public SubjectInterface
   public:
     vector<reference_wrapper<__Observer>> observersObj;
     vector<string> observers;
-    list<__Observer*> observersList;
+    list<__Observer*> __observersList;
 
   public:
     Subject() {}
@@ -28,7 +28,7 @@ class Subject : public SubjectInterface
 
     void attachObj(__Observer *observer)
     {
-      observersList.push_back(observer);
+      __observersList.push_back(observer);
     }
     
     void notify_observersObj()
