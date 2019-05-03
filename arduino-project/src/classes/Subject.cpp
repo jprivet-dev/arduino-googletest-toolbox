@@ -26,9 +26,9 @@ class Subject : public SubjectInterface
       observers.push_back(observer);
     }
 
-    void attachObj(__Observer *o)
+    void attachObj(__Observer *observer)
     {
-      observersList.push_back(o);
+      observersList.push_back(observer);
     }
     
     void notify_observersObj()
