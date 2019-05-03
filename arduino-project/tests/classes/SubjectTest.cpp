@@ -1,4 +1,11 @@
+#include "gmock/gmock.h"
 #include "../../src/classes/Subject.cpp"
+#include "../../src/classes/Observer.cpp"
+
+// Voir https://github.com/google/googletest/blob/master/googlemock/docs/ForDummies.md
+class MockObserver : public __Observer {
+  MOCK_METHOD0(notify, void());
+};
 
 struct SubjectTestSetup : public testing::Test
 {
