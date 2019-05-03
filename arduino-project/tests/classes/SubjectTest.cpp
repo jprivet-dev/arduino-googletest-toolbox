@@ -4,14 +4,14 @@ struct SubjectTestSetup : public testing::Test
 {
     Subject *sub;
     string observer;
-    __observer *observerObj;
+    __Observer *observerObj;
 
     void SetUp()
     {
         // Arrange
         Subject *sub = new Subject();
         observer = "abc";
-        __observer *observerObj = new __observer();
+        __Observer *observerObj = new __Observer();
     }
 
     void TearDown()
