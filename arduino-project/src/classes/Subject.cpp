@@ -10,12 +10,14 @@
 #include "../interfaces/SubjectInterface.cpp"
 #include "Observer.cpp"
 
+using namespace std;
+
 class Subject : public SubjectInterface
 {
   public:
-    std::vector<std::reference_wrapper<__observer>> observersObj;
-    std::vector<std::string> observers;
-    std::list<__observer*> observersList;
+    vector<reference_wrapper<__observer>> observersObj;
+    vector<string> observers;
+    list<__observer*> observersList;
 
   public:
     Subject() {}
