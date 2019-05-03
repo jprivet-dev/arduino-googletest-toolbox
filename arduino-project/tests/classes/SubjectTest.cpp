@@ -53,4 +53,6 @@ TEST_F(SubjectTestSetup, attach_3_observers)
     // Assert
     ASSERT_EQ(sub->observers.size(), 3);
     ASSERT_EQ(sub->__observersList.size(), 3);
+
+    sub->notifyObservers();
 }
