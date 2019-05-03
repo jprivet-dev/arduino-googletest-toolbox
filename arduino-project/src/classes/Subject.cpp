@@ -31,6 +31,13 @@ class Subject : public SubjectInterface
       __observersList.push_back(observer);
     }
     
+    void notifyObservers()
+    {
+      for (__Observer *observer : __observersList) {
+        observer->notify();
+      }
+    }
+        
     void notify_observersObj()
     {
       for (__Observer& o : observersObj) {
