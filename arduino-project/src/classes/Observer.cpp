@@ -9,10 +9,10 @@ class Observer
     void update() {}
 };
 
-class __observer
+class __Observer
 {
   public:
-    __observer() {}
+    __Observer() {}
 
   public:
     virtual void notify() {}
