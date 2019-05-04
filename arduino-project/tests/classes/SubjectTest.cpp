@@ -1,4 +1,3 @@
-#include "gmock/gmock.h"
 #include "../../src/classes/Subject.cpp"
 #include "../../src/classes/Observer.cpp"
 
