@@ -142,5 +142,8 @@ alias t="./runTests"
 
 * https://github.com/google/googlemock
 * https://fr.slideshare.net/LuisGoldster/google-mock-for-dummies-61427788
+* https://github.com/google/googletest/issues/1602
+* https://github.com/google/googlemock/blob/master/googlemock/CMakeLists.txt
+* https://github.com/pauloremoli/cmake-gtest-gmock
 
 {BACK_TO_TOP}
