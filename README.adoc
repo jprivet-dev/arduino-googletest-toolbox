@@ -103,6 +103,23 @@ Le test affichera un message du type :
 [  PASSED  ] 7 tests.
 ```
 
+== Activer les raccourcis
+
+La ligne de commande suivante :
+
+```bash
+cd arduino-project/tests
+$ . .bash_aliases
+```
+
+Activera les raccourcis suivants :
+
+```
+alias cm="cmake CMakeLists.txt"
+alias m="make"
+alias t="./runTests"
+```
+
 == Resources
 
 === GoogleTest
