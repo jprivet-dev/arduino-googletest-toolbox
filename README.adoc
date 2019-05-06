@@ -103,7 +103,7 @@ Le test affichera un message du type :
 [  PASSED  ] 7 tests.
 ```
 
-== Ressources
+== Resources
 
 === GoogleTest
 
