@@ -9,7 +9,7 @@
 [#{BACK_TO_TOP_TARGET}]
 = Arduino & TDD avec Google Test
 
-:toc-title: Table of contents
+:toc-title: Sommaire
 :toclevels: 3
 toc::[]
 
@@ -24,6 +24,8 @@ toc::[]
 ```bash
 $ sudo apt-get install g++
 ```
+
+{BACK_TO_TOP}
 
 === Installer Google Test
 
@@ -47,6 +49,8 @@ sudo ln -s /usr/lib/libgtest.a /usr/local/lib/googletest/libgtest.a
 sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/googletest/libgtest_main.a
 ```
 
+{BACK_TO_TOP}
+
 == Utiliser cette toolbox
 
 === Cloner le repo
@@ -55,6 +59,8 @@ sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/googletest/libgtest_main.a
 git clone git@github.com:jprivet-dev/arduino-googletest-toolbox.git
 cd arduino-googletest-toolbox
 ```
+
+{BACK_TO_TOP}
 
 === Initialiser & Exécuter les tests
 
@@ -103,6 +109,8 @@ Le test affichera un message du type :
 [  PASSED  ] 7 tests.
 ```
 
+{BACK_TO_TOP}
+
 == Activer les raccourcis
 
 La ligne de commande suivante :
@@ -120,6 +128,8 @@ alias m="make"
 alias t="./runTests"
 ```
 
+{BACK_TO_TOP}
+
 == Resources
 
 === GoogleTest
@@ -132,3 +142,5 @@ alias t="./runTests"
 
 * https://github.com/google/googlemock
 * https://fr.slideshare.net/LuisGoldster/google-mock-for-dummies-61427788
+
+{BACK_TO_TOP}
