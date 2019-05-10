@@ -29,10 +29,16 @@ $ sudo apt-get install g++
 
 === Installer Google Test
 
+==== Installer GTest et Gmock
+
 ```bash
 sudo apt-get install libgtest-dev
 sudo apt-get install cmake
+```
 
+==== Configurer GTest
+
+```bash
 cd /usr/src/googletest/googletest
 sudo mkdir build
 
@@ -47,6 +53,38 @@ sudo rm -rf build
 sudo mkdir /usr/local/lib/googletest
 sudo ln -s /usr/lib/libgtest.a /usr/local/lib/googletest/libgtest.a
 sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/googletest/libgtest_main.a
+```
+
+==== Configurer GMock
+
+```bash
+cd /usr/src/googletest/googlemock
+sudo cmake CMakeLists.txt 
+sudo make
+
+sudo cp *.a /usr/lib
+sudo cp gtest/*.a /usr/lib
+
+sudo cp -r include/gmock /usr/include/
+sudo cp -r ../googletest/include/gtest/ /usr/include/
+```
+
+==== Vérifier que tous les fichiers soient bien présents
+
+```bash
+$ ls /usr/lib | grep -i -E -e=\*\\.a$
+# ... ou ...
+$ ls /usr/lib | grep -i -E -e="*\.a$"
+libgmock.a
+libgmock_main.a
+libgtest.a
+libgtest_main.a
+
+$ ls /usr/include/ | grep gmock
+gmock
+
+$ ls /usr/include/ | grep gtest
+gtest
 ```
 
 {BACK_TO_TOP}
@@ -137,6 +175,7 @@ alias t="./runTests"
 * https://github.com/google/googletest
 * How To Install/Use Google C++ Test Framework - https://www.srcmake.com/home/google-cpp-test-framework
 * Google C++ Testing, GTest, GMock Framework - https://www.youtube.com/watch?v=nbFXI9SDfbk&list=PL_dsdStdDXbo-zApdWB5XiF2aWpsqzV55
+* https://packages.debian.org/fr/sid/libgtest-dev
 
 === Google Mock
 
@@ -145,5 +184,8 @@ alias t="./runTests"
 * https://github.com/google/googletest/issues/1602
 * https://github.com/google/googlemock/blob/master/googlemock/CMakeLists.txt
 * https://github.com/pauloremoli/cmake-gtest-gmock
+* https://stackoverflow.com/questions/36086037/cant-build-c-c-program-with-gmock-gmock-h-too-many-errors-are-generated
+* https://packages.debian.org/sid/libgmock-dev
+* https://github.com/maitesin/blog/tree/master/google_mock_2016_01_22
 
 {BACK_TO_TOP}
